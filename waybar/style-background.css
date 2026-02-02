@@ -1,0 +1,124 @@
+@import "machiatto.css";
+
+/* Tokyonight-inspired Waybar style */
+
+* {
+  color: @text;
+  border: 0;
+  font-family: UbuntuMono, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+window#waybar {
+  background-color: rgba(26, 27, 38, 0.9); /* fondo base oscuro */
+  border-bottom: 2px solid @blue;
+}
+
+/* ─────────────────────────────── */
+/* Workspaces                      */
+/* ─────────────────────────────── */
+#workspaces {
+  background-color: @mantle;
+  border-radius: 8px;
+  margin: 6px 10px;
+  padding: 0 4px;
+}
+
+#workspaces button {
+  color: @text;
+  padding: 4px 10px;
+  margin: 0 2px;
+  border-radius: 6px;
+  background: none;
+}
+
+#workspaces button.focused {
+  background-color: @blue;
+  color: @base;
+}
+
+#workspaces button:hover {
+  background-color: @redasfuck;
+}
+
+/* ─────────────────────────────── */
+/* Modules                         */
+/* ─────────────────────────────── */
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#custom-power,
+#custom-swap,
+#custom-keyboard-layout {
+  background-color: @mantle;
+  border-radius: 8px;
+  margin: 5px 4px;
+  padding: 6px 12px;
+  color: @subtext1;
+}
+
+/* Estado y color por módulo */
+#clock { color: @blue; }
+#cpu { color: @teal; }
+#memory { color: @peach; }
+#temperature { color: @yellow; }
+#battery { color: @green; }
+#battery.critical:not(.charging) { color: @red; }
+#network { color: @sapphire; }
+#network.disconnected { color: @red; }
+#pulseaudio { color: @lavender; }
+#pulseaudio.muted { color: @surface1; }
+#tray { background: @mantle; }
+#custom-power { background: @red; color: @base; }
+
+/* ─────────────────────────────── */
+/* Hover y transiciones             */
+/* ─────────────────────────────── */
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#battery:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-power:hover {
+  background-color: @surface1;
+  transition: background 0.2s ease-in-out;
+}
+
+/* ─────────────────────────────── */
+/* Window title                     */
+/* ─────────────────────────────── */
+#window {
+  color: @text;
+  margin: 0 12px;
+}
+
+/* ─────────────────────────────── */
+/* Idle inhibitor                   */
+/* ─────────────────────────────── */
+#idle_inhibitor {
+  background-color: @yellow;
+  color: @base;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+/* ─────────────────────────────── */
+/* Launcher                         */
+/* ─────────────────────────────── */
+#custom-launcher {
+  background-color: @blue;
+  color: @base;
+  border-radius: 10px;
+  padding: 6px 14px;
+  margin-left: 8px;
+}
+
