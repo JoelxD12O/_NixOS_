@@ -185,16 +185,21 @@
     "format-icons": ["", "", "", "", ""]
     //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
   },
-  "network": {
-    // "interface": "wlp2s0", // (Optional) To force the use of this interface
-    "format": "⚠  Disabled",
-    "format-wifi": "  {essid}",
-    // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-    "format-ethernet": "  Wired",
-    "format-disconnected": "⚠  Disconnected",
-    // "on-click": "alacritty -e nmtui"
-    "on-click": "/home/falo/.config/rofi/rofi-wifi-menu.sh"
-  },
+"network": {
+  "format": "⚠  Disabled",
+  "format-wifi": "  {signalStrength}%",
+  "format-ethernet": "  Wired",
+  "format-disconnected": "󰖪",
+  
+  "tooltip": true,
+  "tooltip-format": "SSID: {essid}\nIP: {ipaddr}\nSeñal: {signalStrength}%",
+  
+  "on-click": "/home/falo/.config/rofi/rofi-wifi-menu.sh",
+  "on-click-right": "kitty -e nmtui",
+  "on-scroll-up": "nmcli radio wifi on",
+  "on-scroll-down": "nmcli radio wifi off"
+}
+, 
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon} {volume: >3}%",

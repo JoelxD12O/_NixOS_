@@ -320,6 +320,16 @@ window#waybar {
     margin-right: 10px;
 }
 
+#network {
+  padding: 0 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+#network:hover {
+  background: rgba(125, 207, 255, 0.15);
+}
+
 
 
 /* window#waybar {
