@@ -64,12 +64,15 @@ window#waybar {
 }
 
 #workspaces button {
-    color: @base;
-    border-radius: 50%;
-    /* background-color: @base; */
-    margin: 0px 0px;
-    padding: 4px 6px 2px 0px;
+    padding: 4px 10px;
+    margin: 0 6px;
+    border-radius: 8px;
+    background: transparent;
+    color: @sky;
 }
+
+
+
 
 #workspaces button:hover {
     color: @mauve;
@@ -81,10 +84,12 @@ window#waybar {
     background: none;
 }
 
-#workspaces button:hover * {
+
+#workspaces button:hover {
+    background-color: shade(@base, 1.2);
     color: @mauve;
-    background-color: @base;
 }
+
 
 #workspaces * {
     color: @sky;
@@ -98,14 +103,16 @@ window#waybar {
     margin: 8px 0px 8px 8px;
 }
 
-
 #workspaces button.active {
-    background-color: @mauve;      /* Color del workspace activo */
-    color: @base;                  /* Texto/icono */
-    border-radius: 50%;
-    padding: 4px 8px 4px 0px;  /* padding simétrico */
-    margin: 0 10px;
+    background-color: @mauve;
+    color: @base;
+    border-radius: 8px;
+    padding: 4px 10px;
+    margin: 0 6px;
+    font-weight: bold;
 }
+
+
 
 #workspaces button.active * {
     color: @base;       /* Asegura que el color interno cambie */
