@@ -13,7 +13,9 @@
     "mpd#4",
     "mpd"
   ],
-  "modules-center": ["clock"],
+ "modules-center": [
+  "group/center-music"
+],
   "modules-right": [
     "network",
     "temperature",
@@ -22,27 +24,36 @@
     "pulseaudio",
     "battery"
   ],
+  
+  "group/center-music": {
+  "orientation": "horizontal",
+  "modules": [
+    "custom/spotify",
+    "clock"
+  ]
+},
 
   // Modules configuration
 
-  "hyprland/workspaces": {
+"hyprland/workspaces": {
   "disable-scroll": true,
   "all-outputs": true,
-  "format": "{name}:{icon}",
+  "format": "{icon}",
   "format-icons": {
     "1": "",
     "2": "",
-    "3": "",
-    "4": "",
-    "5": "",
-    "6": "",
-    "7": "󰻀",
-    "8": "",
+    "3": "󰠮",   // Obsidian
+    "4": "󰖣",
+    "5": "",
+    "6": "",
+    "7": "",
+    "8": "󰻀",
     "9": "",
     "10": "",
     "19": "",
-    "20": "󰖣",
-    "21": "⌀"
+    "20": "",
+    "21": "⌀",
+    "default": ""
   }
 },
   "mpd": {
@@ -96,6 +107,17 @@
     "interval": 5,
     "exec": "mpc current --format='\"title\":\"%title%\",\"artist\":\"%artist%\"'"
   },
+"custom/spotify": {
+  "exec": "~/.config/waybar/scripts/spotify.sh",
+  "interval": 2,
+  "return-type": "plain",
+  "on-click": "playerctl -p spotify play-pause",
+  "on-scroll-up": "playerctl -p spotify next",
+  "on-scroll-down": "playerctl -p spotify previous"
+},
+
+
+
  "clock": {
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -220,3 +242,15 @@
   },
  }
 }
+
+
+"custom/spotify": {
+  "exec": "playerctl -p spotify metadata --format '  {{artist}} - {{title}}'",
+  "interval": 2,
+  "max-length": 35,
+  "escape": true,
+  "on-click": "playerctl -p spotify play-pause",
+  "on-scroll-up": "playerctl -p spotify next",
+  "on-scroll-down": "playerctl -p spotify previous"
+},
+
