@@ -1,3 +1,8 @@
+// ============================================
+// WAYBAR - Configuración de la barra de estado
+// ============================================
+// Define módulos, posición, altura y apariencia de la barra superior
+// Usa style.css para el diseño visual
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
@@ -111,6 +116,8 @@
   "exec": "~/.config/waybar/scripts/spotify.sh",
   "interval": 2,
   "return-type": "plain",
+  "format": "{}",
+  "escape": false,
   "on-click": "playerctl -p spotify play-pause",
   "on-scroll-up": "playerctl -p spotify next",
   "on-scroll-down": "playerctl -p spotify previous",

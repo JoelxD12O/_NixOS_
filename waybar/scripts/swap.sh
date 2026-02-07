@@ -1,4 +1,9 @@
 #!/bin/bash
+# ============================================
+# Swap - Alterna entre dos configuraciones de waybar
+# ============================================
+# Intercambia entre config normal y config-background
+# Útil para tener dos temas diferentes de waybar
 
 # Set the path to the config and style files
 config_file="${HOME}/.config/waybar/config"
