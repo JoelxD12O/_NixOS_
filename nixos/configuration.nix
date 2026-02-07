@@ -95,6 +95,15 @@ security.rtkit.enable = true;
 
 programs.hyprlock.enable = true;
 
+# Suspensión automática por inactividad (como Windows)
+services.logind = {
+  enable = true;
+  idleAction = "suspend";              # Acción cuando se alcanza inactividad: suspender
+  idleActionSec = "10s";               # 10 segundos de prueba
+  lidSwitchExternalPower = "suspend";  # Cierre de tapa = suspender
+  handlePowerKey = "suspend";          # Botón power = suspender
+  powerKeyLongPress = "poweroff";      # Power largo = apagar
+};
 
   # You can use https://search.nixos.org/ to find more packages (and options).
   nixpkgs.config.allowUnfree = true;
@@ -106,6 +115,8 @@ programs.hyprlock.enable = true;
     kitty
     hyprlock
     hyprpaper
+    hypridle
+    xidletime
     waybar
     rofi
     zapzap
