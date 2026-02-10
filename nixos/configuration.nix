@@ -105,15 +105,7 @@ in
   programs.git.enable = true;
   programs.nix-ld.enable = true;
 
-  # Gestión de energía y suspensión automática
-  services.logind = {
-    enable = true;
-    idleAction = "suspend";
-    idleActionSec = "30m";              # Suspender tras 30 minutos de inactividad
-    lidSwitchExternalPower = "suspend";
-    handlePowerKey = "suspend";
-    powerKeyLongPress = "poweroff";
-  };
+
 
   # ============================================
   # PAQUETES
@@ -220,6 +212,8 @@ in
     obsidian
     vscode
     zoom-us
+    postman
+    
 
     # Juegos
     steam
