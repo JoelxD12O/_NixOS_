@@ -229,6 +229,8 @@ in
     nix-prefetch-github
     os-prober
     efibootmgr
+    distrobox
+    podman
   ];
 
   # ============================================
@@ -268,6 +270,11 @@ in
   virtualisation.docker = {
     enable = true;
   };
+
+
+virtualisation.podman.enable = true;
+
+
 
   # ============================================
   # FUENTES
