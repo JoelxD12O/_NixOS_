@@ -97,6 +97,9 @@ in
   # ============================================
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+  security.polkit.enable = true;
 
   # Programas del sistema
   programs.firefox.enable = true;
@@ -104,7 +107,7 @@ in
   programs.hyprlock.enable = true;
   programs.git.enable = true;
   programs.nix-ld.enable = true;
-
+  
 
 
   # ============================================
@@ -117,6 +120,7 @@ in
     wget
     curl
     unzip
+
 
     # Git y desarrollo
     git
@@ -169,6 +173,8 @@ in
     kdePackages.qtwayland
     kdePackages.qtsvg
     kdePackages.kio-extras
+    kdePackages.kio-fuse
+    kdePackages.kio-admin
 
     # Temas Qt
     adwaita-qt
