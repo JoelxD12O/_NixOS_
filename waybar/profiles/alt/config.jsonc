@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 42,
+  "margin": "8 10 0 10",
+
+  "modules-left": [
+    "custom/profile",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/sysdash",
+    "custom/spotify",
+    "network",
+    "pulseaudio",
+    "battery",
+    "tray"
+  ],
+
+  "custom/profile": {
+    "format": "WB2",
+    "tooltip": "Waybar profile 2",
+    "on-click": "~/.config/waybar/scripts/toggle.sh"
+  },
+  "custom/sysdash": {
+    "format": "DASH",
+    "tooltip": "System dashboard",
+    "on-click": "~/.config/hypr/scripts/sysdash-launch.sh"
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{id}",
+    "on-click": "activate"
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 45,
+    "separate-outputs": true
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A %d/%m %H:%M:%S}",
+    "tooltip-format": "<big>{:%A %d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "on-scroll": 1
+    }
+  },
+  "custom/spotify": {
+    "exec": "~/.config/waybar/scripts/spotify.sh",
+    "interval": 2,
+    "return-type": "plain",
+    "format": "{}",
+    "escape": false,
+    "max-length": 28,
+    "on-click": "playerctl -p spotify play-pause"
+  },
+  "network": {
+    "format-wifi": "󰖩  {essid}",
+    "format-ethernet": "󰈀  Wired",
+    "format-disconnected": "󰖪  Offline",
+    "tooltip-format": "{ifname}\n{ipaddr}",
+    "on-click": "~/.config/rofi/menus/wifi/launch.sh"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰝟  mute",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "bash -lc '~/.config/eww/audio/scripts/toggle.sh >/dev/null 2>&1 &'",
+    "on-click-right": "pavucontrol"
+  },
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+  },
+  "tray": {
+    "spacing": 10
+  }
+}

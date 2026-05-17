@@ -1,0 +1,231 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+  color: #f5e9e2;
+}
+
+window,
+.background {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+$shell: rgba(14, 15, 22, 0.55);
+$panel: rgba(23, 20, 29, 0.96);
+$panel-soft: rgba(34, 27, 36, 0.98);
+$panel-alt: rgba(44, 33, 39, 0.98);
+$border: rgba(241, 182, 168, 0.18);
+$text: #f5e9e2;
+$muted: #ceb7ae;
+$accent: #f1b6a8;
+$accent-strong: #e5927f;
+$accent-soft: rgba(241, 182, 168, 0.14);
+$track: rgba(255, 255, 255, 0.08);
+$shadow: rgba(0, 0, 0, 0.40);
+
+.audio-shell {
+  background-color: transparent;
+  padding: 0;
+}
+
+.panel-frame {
+  min-width: 372px;
+  background-color: $panel;
+  border: 1px solid $border;
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: 0 20px 44px $shadow;
+}
+
+.panel-topline {
+  margin-bottom: 12px;
+}
+
+label.panel-kicker {
+  color: $text;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+label.panel-pill {
+  color: #1d1213;
+  background-color: $accent;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.cover-card,
+.now-playing,
+.volume-block {
+  background-color: $panel-soft;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.cover-card {
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+image.cover-image {
+  border-radius: 18px;
+}
+
+.now-playing,
+.volume-block {
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+
+label.eyebrow {
+  color: $muted;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+label.track-title {
+  color: $text;
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+label.track-artist {
+  color: $muted;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+progress.track-progress {
+  min-height: 10px;
+  background-color: $track;
+  border-radius: 999px;
+  color: $accent;
+}
+
+progress.track-progress trough {
+  background-color: $track;
+  border-radius: 999px;
+}
+
+progress.track-progress progress {
+  background-color: $accent;
+  border-radius: 999px;
+}
+
+.section-head {
+  margin-bottom: 14px;
+}
+
+label.volume-headline {
+  color: $text;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+scale.volume-scale {
+  margin-top: 2px;
+}
+
+scale.volume-scale trough {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  min-height: 12px;
+}
+
+scale.volume-scale highlight {
+  background-color: $accent;
+  border-radius: 999px;
+}
+
+scale.volume-scale slider {
+  background-color: #fff4ee;
+  border-radius: 999px;
+  min-width: 18px;
+  min-height: 18px;
+  margin: -4px 0;
+}
+
+.micro-actions {
+  margin-top: 16px;
+}
+
+button.chip,
+button.control,
+button.utility-button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+button.chip {
+  background-color: $panel-alt;
+  color: $text;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+button.chip:hover {
+  background-color: rgba(241, 182, 168, 0.22);
+}
+
+button.chip-wide {
+  margin: 0 10px;
+  min-width: 120px;
+}
+
+.player-controls {
+  margin-bottom: 14px;
+}
+
+button.control {
+  color: $text;
+  border-radius: 20px;
+  font-size: 26px;
+  font-weight: 800;
+  padding: 14px 22px;
+}
+
+button.control.secondary {
+  background-color: $panel-soft;
+}
+
+button.control.secondary:hover {
+  background-color: rgba(241, 182, 168, 0.18);
+}
+
+button.control.primary {
+  background-color: $accent;
+  color: #181012;
+  margin: 0 12px;
+}
+
+button.control.primary:hover {
+  background-color: $accent-strong;
+}
+
+.utility-row {
+  margin-top: 2px;
+}
+
+button.utility-button {
+  background-color: $panel-soft;
+  color: $text;
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+button.utility-button:hover {
+  background-color: rgba(241, 182, 168, 0.18);
+}
+
+button.utility-button.subtle {
+  margin-left: 10px;
+}

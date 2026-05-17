@@ -1,0 +1,100 @@
+* {
+  color: #89b4fa;
+  border: 0;
+  font-family: UbuntuMono, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+window#waybar {
+  background-color: rgba(26, 27, 38, 0.9);
+  border-bottom: 2px solid #89b4fa;
+}
+
+#workspaces {
+  background-color: rgba(24, 24, 37, 0.95);
+  border-radius: 8px;
+  margin: 6px 10px;
+  padding: 0 4px;
+}
+
+#workspaces button {
+  padding: 6px 12px;
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+  border-bottom: 3px solid #89b4fa;
+  background-color: rgba(137, 180, 250, 0.1);
+}
+
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#custom-power,
+#custom-swap,
+#custom-sysdash,
+#custom-keyboard-layout,
+#custom-spotify,
+#mpd {
+  background-color: rgba(24, 24, 37, 0.95);
+  border-radius: 8px;
+  margin: 5px 4px;
+  padding: 6px 12px;
+  color: #7aa2f7;
+}
+
+#clock { color: #89b4fa; }
+#cpu { color: #7aa2f7; }
+#memory { color: #b4befe; }
+#temperature { color: #89b4fa; }
+#battery { color: #7aa2f7; }
+#battery.critical:not(.charging) { color: #f38ba8; }
+#network { color: #89b4fa; }
+#network.disconnected { color: #f38ba8; }
+#pulseaudio { color: #b4befe; }
+#pulseaudio.muted { color: #6c7086; }
+#tray { background: rgba(24, 24, 37, 0.95); }
+#custom-power { background: #f38ba8; color: #1e1e2e; }
+#custom-sysdash { color: #f9e2af; }
+
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#battery:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-power:hover,
+#custom-sysdash:hover,
+#custom-spotify:hover,
+#mpd:hover {
+  background-color: rgba(69, 71, 90, 0.95);
+}
+
+#window {
+  color: #89b4fa;
+  margin: 0 12px;
+}
+
+#idle_inhibitor {
+  background-color: #89b4fa;
+  color: #1e1e2e;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+#custom-launcher {
+  background-color: #89b4fa;
+  color: #1e1e2e;
+  border-radius: 10px;
+  padding: 6px 14px;
+  margin-left: 8px;
+}

@@ -1,0 +1,95 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: JetBrainsMono Nerd Font, UbuntuMono, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: #d9e1ff;
+}
+
+#custom-profile,
+#custom-sysdash,
+#workspaces,
+#window,
+#clock,
+#custom-spotify,
+#network,
+#pulseaudio,
+#battery,
+#tray {
+  background: rgba(18, 20, 31, 0.92);
+  color: #d9e1ff;
+  margin: 0 6px;
+  padding: 8px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(108, 143, 255, 0.22);
+}
+
+#custom-profile {
+  color: #89b4fa;
+  background: rgba(33, 41, 70, 0.95);
+}
+
+#custom-sysdash {
+  color: #f9e2af;
+  background: rgba(48, 36, 25, 0.92);
+}
+
+#workspaces {
+  padding: 4px 8px;
+}
+
+#workspaces button {
+  color: #8b95b7;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+#workspaces button.active {
+  color: #11131d;
+  background: #89b4fa;
+}
+
+#window {
+  color: #cdd6f4;
+}
+
+#clock {
+  color: #f9e2af;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+#custom-spotify {
+  color: #a6e3a1;
+}
+
+#network {
+  color: #89dceb;
+}
+
+#pulseaudio {
+  color: #fab387;
+}
+
+#battery {
+  color: #b4f1b4;
+}
+
+#battery.warning {
+  color: #f9e2af;
+}
+
+#battery.critical {
+  color: #f38ba8;
+}
+
+#tray {
+  padding-left: 12px;
+  padding-right: 12px;
+}

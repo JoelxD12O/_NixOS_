@@ -1,0 +1,107 @@
+configuration {
+    show-icons: false;
+}
+
+@import "../../shared/colors.rasi"
+@import "../../shared/fonts.rasi"
+
+* {
+    background-colour: #10121bee;
+    border-colour:     #89b4fa22;
+    foreground-colour: #dce4ff;
+    selected-normal-background: #7aa2f7;
+    selected-normal-foreground: #0f1320;
+    normal-background: transparent;
+    normal-foreground: @foreground-colour;
+    active-background: #1a2238;
+    active-foreground: #dce4ff;
+    urgent-background: #f38ba8;
+    urgent-foreground: #10131c;
+    alternate-normal-background: transparent;
+    alternate-normal-foreground: @foreground-colour;
+    font: "JetBrainsMono Nerd Font 13";
+}
+
+window {
+    transparency: "real";
+    location: northeast;
+    anchor: northeast;
+    x-offset: -18px;
+    y-offset: 46px;
+    width: 560px;
+    border: 1px;
+    border-radius: 16px;
+    background-color: @background-colour;
+}
+
+mainbox {
+    padding: 16px 16px 18px 16px;
+    spacing: 10px;
+    background-color: transparent;
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+    padding: 12px 18px;
+    spacing: 18px;
+    border: 0px;
+    border-radius: 14px;
+    background-color: #171a26;
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "󰖩";
+    padding: 0px 6px 0px 0px;
+    margin: 0px 4px 0px 0px;
+    text-color: #89b4fa;
+    background-color: transparent;
+}
+
+entry {
+    expand: true;
+    padding: 1px 2px 0px 0px;
+    placeholder: "Search network...";
+    placeholder-color: #7f849c;
+    background-color: transparent;
+    text-color: @foreground-colour;
+}
+
+listview {
+    lines: 8;
+    spacing: 6px;
+    scrollbar: true;
+    fixed-height: true;
+    border: 0px;
+    background-color: transparent;
+}
+
+scrollbar {
+    handle-width: 6px;
+    handle-color: #89b4fa;
+    background-color: #171a26;
+    border-radius: 999px;
+}
+
+element {
+    padding: 14px 16px;
+    border-radius: 14px;
+    background-color: #181b28;
+    text-color: @foreground-colour;
+    border: 1px;
+    border-color: transparent;
+}
+
+element normal.active,
+element selected.normal {
+    background-color: #7aa2f7;
+    text-color: #0f1320;
+    border-color: #9ec1ff33;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

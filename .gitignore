@@ -57,6 +57,6 @@ kitty/*.log
 # =====================
 # Nix
 # =====================
+nixos-configuration/
 result
 .nix-*
-

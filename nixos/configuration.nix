@@ -142,6 +142,7 @@ in
     hypridle
     waybar
     rofi
+    eww
     dunst
     wev
 

@@ -1,0 +1,120 @@
+configuration {
+    show-icons: false;
+}
+
+@import "../../shared/colors.rasi"
+@import "../../shared/fonts.rasi"
+
+* {
+    background-colour: #0f1118ef;
+    border-colour:     #f5b8a833;
+    foreground-colour: #f3e9e5;
+    selected-normal-background: #f2b3a2;
+    selected-normal-foreground: #181411;
+    normal-background: transparent;
+    normal-foreground: @foreground-colour;
+    active-background: #3a231e;
+    active-foreground: #f3e9e5;
+    urgent-background: #f38ba8;
+    urgent-foreground: #181411;
+    alternate-normal-background: transparent;
+    alternate-normal-foreground: @foreground-colour;
+    font: "JetBrainsMono Nerd Font 13";
+}
+
+window {
+    transparency: "real";
+    location: northeast;
+    anchor: northeast;
+    x-offset: -18px;
+    y-offset: 46px;
+    width: 420px;
+    border: 1px;
+    border-radius: 18px;
+    background-color: @background-colour;
+}
+
+mainbox {
+    padding: 14px 14px 16px 14px;
+    spacing: 8px;
+    background-color: transparent;
+    children: [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    padding: 10px 16px;
+    spacing: 16px;
+    border: 0px;
+    border-radius: 14px;
+    background-color: #1a171f;
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "󰕾";
+    padding: 0px 6px 0px 0px;
+    margin: 0px 4px 0px 0px;
+    text-color: #f2b3a2;
+    background-color: transparent;
+}
+
+entry {
+    expand: true;
+    padding: 1px 2px 0px 0px;
+    placeholder: "Quick audio...";
+    placeholder-color: #9b8c88;
+    background-color: transparent;
+    text-color: @foreground-colour;
+}
+
+message {
+    padding: 10px 14px;
+    border-radius: 14px;
+    background-color: #17131a;
+    border: 1px;
+    border-color: #f2b3a21a;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: #e8d8d2;
+}
+
+listview {
+    lines: 8;
+    spacing: 5px;
+    scrollbar: true;
+    fixed-height: true;
+    border: 0px;
+    background-color: transparent;
+}
+
+scrollbar {
+    handle-width: 6px;
+    handle-color: #f2b3a2;
+    background-color: #1a171f;
+    border-radius: 999px;
+}
+
+element {
+    padding: 11px 14px;
+    border-radius: 14px;
+    background-color: #19151c;
+    text-color: @foreground-colour;
+    border: 1px;
+    border-color: transparent;
+}
+
+element normal.active,
+element selected.normal {
+    background-color: #f2b3a2;
+    text-color: #181411;
+    border-color: #ffd4c733;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
